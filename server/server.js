@@ -24,7 +24,7 @@ const newsRoutes = require('./routes/SaveNews');
 app.use('/auth', AuthRouter);
 app.use('/', newsRoutes);
 
-app.get('/ping', (req, res) => {
+app.get('/', (req, res) => {
   res.send('pong');
 });
 
