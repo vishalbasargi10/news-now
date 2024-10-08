@@ -6,7 +6,13 @@ const bodyParser = require('body-parser');
 const WebSocket = require('ws');
 const app = express();
 
-app.use(cors());
+app.use(cors(
+  {
+    origin:["https://news-now-ten.vercel.app/"],
+    methods:["POST","GET"],
+    credentials:true
+  }
+));
 app.use(express.json());
 app.use(bodyParser.json());
 
